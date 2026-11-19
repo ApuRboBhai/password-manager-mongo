@@ -13,7 +13,7 @@ const Manager = () => {
   const [passwordArray, setpasswordArray] = useState([])//password er array hishebe thakbe
 
   const getPassword = async () => {
-    let req = await fetch("http://localhost:3000/");
+    let req = await fetch("https://password-manager-mongo-jk8c.onrender.com");
 
     let password = await req.json()
    
@@ -63,7 +63,7 @@ const Manager = () => {
       let id = uuidv4();
       setpasswordArray([...passwordArray, { ...form, id }])
       // localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id }]))
-      let res = await fetch("http://localhost:3000/",{method: "POST",headers: {"Content-Type": "application/json"}, body:JSON.stringify({...form,id:id})})
+      let res = await fetch("https://password-manager-mongo-jk8c.onrender.com",{method: "POST",headers: {"Content-Type": "application/json"}, body:JSON.stringify({...form,id:id})})
       setform({ site: "", username: "", password: "" })
       console.log(form);
       
@@ -97,7 +97,7 @@ const Manager = () => {
     )
     setpasswordArray(newArray)
     // localStorage.setItem("passwords", JSON.stringify(newArray))
-      let res = await fetch("http://localhost:3000/",{method: "DELETE",headers: {"Content-Type": "application/json"}, body:JSON.stringify({id:id})})
+      let res = await fetch("https://password-manager-mongo-jk8c.onrender.com",{method: "DELETE",headers: {"Content-Type": "application/json"}, body:JSON.stringify({id:id})})
 
       
     toast.success("Delete successfull");
