@@ -267,9 +267,10 @@ const Manager = () => {
         </div>
       }
 
-
+ <div className=' max-h-87.5 overflow-y-auto w-full [-ms-overflow-style:none] [scrollbar:none]'>
       {passwordArray.map((item, index) => {
         return (
+         
           <div key={index} className=" flex-col flex  justify-center items-center">
             <div className=" bg-neutral-primary-soft shadow-xs rounded-base border border-white w-full md:w-[80%] m-3 ">
               <table className="w-full text-sm text-left  text-white table-fixed ">
@@ -370,8 +371,10 @@ const Manager = () => {
               </table>
             </div>
           </div>
+         
         );
       })}
+       </div>
 
     </>
 
