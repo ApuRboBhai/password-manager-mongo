@@ -267,7 +267,7 @@ const Manager = () => {
         </div>
       }
 
- <div className=' max-h-87.5 overflow-y-auto w-full [-ms-overflow-style:none] [scrollbar:none]'>
+ <div className=' max-h-60 overflow-y-auto w-full [-ms-overflow-style:none] [scrollbar-width:none]'>
       {passwordArray.map((item, index) => {
         return (
          
